@@ -135,7 +135,7 @@ def main():
                 # Clear the console to reprint the updated transcription.
                 os.system('cls' if os.name=='nt' else 'clear')
                 for line in transcription:
-                    if line_in_song(song, line):
+                    if len(line.split()) >= 3 and line_in_song(song, line):
                         print('\033[93m' + "SONGGGGGG!!!!!!!" + '\033[0m')
                     print(line)
                 # Flush stdout.
